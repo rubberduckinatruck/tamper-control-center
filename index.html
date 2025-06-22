@@ -63,10 +63,15 @@
 </head>
 <body>
 
-  <nav>
-    <a href="index.html">🏠 Control Center</a>
-    <a href="scripts.html">🧾 View All Scripts</a>
-  </nav>
+ <div id="navbar"></div>
+<script>
+  fetch("assets/nav.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar").innerHTML = data;
+    });
+</script>
+
 
   <h1>🧭 Tampermonkey Control Center</h1>
 <section>
