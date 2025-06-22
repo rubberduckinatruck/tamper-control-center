@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Install Tampermonkey Scripts</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 1rem;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    nav {
+      background: #eee;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    nav a {
+      margin-right: 1rem;
+    }
+    h1 {
+      margin-bottom: 1rem;
+    }
+    .script-box {
+      max-width: 800px;
+      margin: 0 auto 1rem auto;
+      padding: 0.75rem;
+      background: #fff;
+      border: 1px solid #ccc;
+    }
+    .script-box:nth-of-type(even) {
+      background-color: #f2f2f2;
+    }
+    .script-header {
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    .install-link {
+      display: inline-block;
+      margin-top: 0.4rem;
+      padding: 0.3rem 0.6rem;
+      background-color: #007acc;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+    .install-link:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">🏠 Control Center</a>
+    <a href="scripts.html">🧾 View All Scripts</a>
+    <a href="install.html">📥 Install Scripts</a>
+  </nav>
+
+  <h1>📥 Tampermonkey Script Installer</h1>
+  <p>Click the install button next to each script to add it to Tampermonkey. These will auto-update from your GitHub repo.</p>
+
+    <div class="script-box">
+      <div class="script-header">Script Toggle Panel</div>
+      <p>Floating panel for enabling/disabling scripts by role or group.</p>
+      <a class="install-link" href="https://github.com/rubberduckinatruck/tamper-control-center/raw/refs/heads/main/scripts/system/script-toggle-panel.user.js">Install Script Toggle Panel</a>
+    </div>
+    
+    <div class="script-box">
+      <div class="script-header">Dashboard Injector</div>
+      <p>Injects quick-access buttons or overlays into supported pages.</p>
+      <a class="install-link" href="https://github.com/rubberduckinatruck/tamper-control-center/raw/refs/heads/main/scripts/system/dashboard-injector.user.js">Install Dashboard Injector</a>
+    </div>
+    
+    <div class="script-box">
+      <div class="script-header">Update Checker</div>
+      <p>Checks for new versions of installed scripts or alerts you to missing ones.</p>
+      <a class="install-link" href="https://github.com/rubberduckinatruck/tamper-control-center/raw/refs/heads/main/scripts/system/update-checker.user.js">Install Update Checker</a>
+    </div>
+    
+    <div class="script-box">
+      <div class="script-header">Script Backup Exporter</div>
+      <p>Exports all current userscripts to a local file or synced location.</p>
+      <a class="install-link" href="https://github.com/rubberduckinatruck/tamper-control-center/raw/refs/heads/main/scripts/system/script-backup-exporter.user.js">Install Script Backup Exporter</a>
+    </div>
+    
+    <div class="script-box">
+      <div class="script-header">Settings Sync Manager</div>
+      <p>Sync script settings across browsers or devices using localStorage or cloud.</p>
+      <a class="install-link" href="https://github.com/rubberduckinatruck/tamper-control-center/raw/refs/heads/main/scripts/system/settings-sync-manager.user.js">Install Settings Sync Manager</a>
+    </div>
+    
+</body>
+</html>
