@@ -7,6 +7,15 @@
 </head>
 <body>
 
+  <div id="navbar"></div>
+<script>
+  fetch("assets/nav.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar").innerHTML = data;
+    });
+</script>
+  
   <script>
 function getStatusLabel(state) {
   if (!state) return "❓";
@@ -41,14 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
   
- <div id="navbar"></div>
-<script>
-  fetch("assets/nav.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("navbar").innerHTML = data;
-    });
-</script>
+ 
 
 
   <h1>🧭 Tampermonkey Control Center</h1>
