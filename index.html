@@ -63,6 +63,40 @@
 </head>
 <body>
 
+  <script>
+function getStatusLabel(state) {
+  if (!state) return "❓";
+  try {
+    const obj = JSON.parse(state);
+    const value = obj.value || "❓";
+    if (value === "enabled") return "✅";
+    if (value === "disabled") return "❌";
+    return "❓";
+  } catch {
+    return "❓";
+  }
+}
+
+function refreshStatuses() {
+  const hats = document.querySelectorAll("[data-hat]");
+  let activeCount = 0;
+  hats.forEach(el => {
+    const id = el.dataset.hat;
+    const val = localStorage.getItem("status_" + id);
+    const badge = document.getElementById("status-" + id);
+    const label = getStatusLabel(val);
+    if (badge) badge.textContent = label;
+    if (label.includes("✅")) activeCount++;
+  });
+  const countSpan = document.getElementById("active-count");
+  if (countSpan) countSpan.textContent = activeCount;
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  refreshStatuses();
+});
+</script>
+  
  <div id="navbar"></div>
 <script>
   fetch("assets/nav.html")
