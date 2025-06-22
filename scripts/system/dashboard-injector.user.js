@@ -4,6 +4,8 @@
 // @version      0.1
 // @description  Dashboard Injector - System Tool Script
 // @match        *://*/*
+// @updateURL    https://github.com/rubberduckinatruck/tamper-control-center/raw/refs/heads/main/scripts/system/dashboard-injector.user.js
+// @downloadURL  https://github.com/rubberduckinatruck/tamper-control-center/raw/refs/heads/main/scripts/system/dashboard-injector.user.js
 // @grant        none
 // ==/UserScript==
 

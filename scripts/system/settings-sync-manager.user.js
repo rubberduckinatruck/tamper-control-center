@@ -4,6 +4,8 @@
 // @version      0.1
 // @description  Settings Sync Manager - System Tool Script
 // @match        *://*/*
+// @updateURL    https://github.com/rubberduckinatruck/tamper-control-center/raw/refs/heads/main/scripts/system/settings-sync-manager.user.js
+// @downloadURL  https://github.com/rubberduckinatruck/tamper-control-center/raw/refs/heads/main/scripts/system/settings-sync-manager.user.js
 // @grant        none
 // ==/UserScript==
 

@@ -4,6 +4,8 @@
 // @version      0.1
 // @description  Script Backup Exporter - System Tool Script
 // @match        *://*/*
+// @updateURL    https://github.com/rubberduckinatruck/tamper-control-center/raw/refs/heads/main/scripts/system/script-backup-exporter.user.js
+// @downloadURL  https://github.com/rubberduckinatruck/tamper-control-center/raw/refs/heads/main/scripts/system/script-backup-exporter.user.js
 // @grant        none
 // ==/UserScript==
 

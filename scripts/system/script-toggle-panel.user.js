@@ -4,6 +4,8 @@
 // @version      0.1
 // @description  Script Toggle Panel - System Tool Script
 // @match        *://*/*
+// @updateURL    https://github.com/rubberduckinatruck/tamper-control-center/raw/refs/heads/main/scripts/system/script-toggle-panel.user.js
+// @downloadURL  https://github.com/rubberduckinatruck/tamper-control-center/raw/refs/heads/main/scripts/system/script-toggle-panel.user.js
 // @grant        none
 // ==/UserScript==
 
