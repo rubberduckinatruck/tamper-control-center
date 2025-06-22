@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,10 +6,17 @@
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+
+  <nav style="background:#eee;padding:0.75rem;margin-bottom:2rem;">
+    <a href="index.html" style="margin-right:1.5rem;">🏠 Control Center</a>
+    <a href="scripts.html">🧾 View All Scripts</a>
+  </nav>
+
   <h1>🧭 Tampermonkey Control Center</h1>
 
   <section class="toggle-group">
     <h2>🛠️ System Tools</h2>
+    <p>Tools that power your infrastructure: enable/disable scripts, check for updates, and inject floating control UIs. These are foundational utilities — they do not perform user-facing tasks, but they keep your system healthy and organized.</p>
     <button onclick="activateMode('system')">▶️ Activate System Mode</button>
     <button onclick="toggleGroup('system', true)">✅ Enable All</button>
     <button onclick="toggleGroup('system', false)">❌ Disable All</button>
@@ -27,7 +35,7 @@
       };
       scripts[group].forEach(id => {
         console.log((enable ? 'Enabling' : 'Disabling') + ' script:', id);
-        // Simulate toggle, replace with actual enable/disable logic
+        // Placeholder for actual Tampermonkey toggle logic
       });
       location.reload();
     }
