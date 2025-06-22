@@ -1,0 +1,25 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 2rem;
+  background-color: #f9f9f9;
+  color: #333;
+}
+h2 {
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.2rem;
+}
+section {
+  margin-bottom: 2rem;
+}
+.toggle-group {
+  margin: 1rem 0;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid #ccc;
+}
+button {
+  margin-right: 1rem;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+}

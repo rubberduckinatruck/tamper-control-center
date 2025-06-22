@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Control Center</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <h1>🧭 Tampermonkey Control Center</h1>
+
+  <section class="toggle-group">
+    <h2>🛠️ System Tools</h2>
+    <button onclick="activateMode('system')">▶️ Activate System Mode</button>
+    <button onclick="toggleGroup('system', true)">✅ Enable All</button>
+    <button onclick="toggleGroup('system', false)">❌ Disable All</button>
+  </section>
+
+  <script>
+    const systemScripts = [
+      'script-toggle-panel',
+      'dashboard-injector',
+      'update-checker'
+    ];
+
+    function toggleGroup(group, enable) {
+      const scripts = {
+        system: systemScripts
+      };
+      scripts[group].forEach(id => {
+        console.log((enable ? 'Enabling' : 'Disabling') + ' script:', id);
+        // Simulate toggle, replace with actual enable/disable logic
+      });
+      location.reload();
+    }
+
+    function activateMode(group) {
+      console.log('Activating mode:', group);
+      // Placeholder for full group mode activation logic
+    }
+  </script>
+</body>
+</html>
