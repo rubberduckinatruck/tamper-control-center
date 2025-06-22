@@ -7,10 +7,15 @@
 </head>
 <body>
 
-  <nav style="background:#eee;padding:0.75rem;margin-bottom:2rem;">
-    <a href="index.html" style="margin-right:1.5rem;">🏠 Control Center</a>
-    <a href="scripts.html">🧾 View All Scripts</a>
-  </nav>
+<div id="navbar"></div>
+<script>
+  fetch("assets/nav.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar").innerHTML = data;
+    });
+</script>
+
 
   <h1>📜 Tampermonkey Script List</h1>
 <h2>📚 Teaching Tools</h2>
