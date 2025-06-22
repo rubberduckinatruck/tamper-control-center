@@ -52,11 +52,15 @@
 </head>
 <body>
 
-  <nav>
-    <a href="index.html">🏠 Control Center</a>
-    <a href="scripts.html">🧾 View All Scripts</a>
-    <a href="install.html">📥 Install Scripts</a>
-  </nav>
+<div id="navbar"></div>
+<script>
+  fetch("assets/nav.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar").innerHTML = data;
+    });
+</script>
+
 
   <h1>📥 Tampermonkey Script Installer</h1>
   <p>Click the install button next to each script to add it to Tampermonkey. These will auto-update from your GitHub repo.</p>
