@@ -1,25 +1,83 @@
-
+/* Base page layout */
 body {
   font-family: Arial, sans-serif;
-  margin: 2rem;
+  margin: 1.5rem;
   background-color: #f9f9f9;
   color: #333;
 }
+
+/* Headings */
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
 h2 {
+  font-size: 1.4rem;
   border-bottom: 2px solid #ccc;
   padding-bottom: 0.2rem;
+  margin-top: 1.5rem;
 }
+
+/* Section styling (role or tool box) */
 section {
-  margin-bottom: 2rem;
-}
-.toggle-group {
-  margin: 1rem 0;
-  padding: 1rem;
+  max-width: 800px;
+  margin: 0 auto 1.2rem auto;
+  padding: 0.75rem;
   background: #fff;
   border: 1px solid #ccc;
 }
-button {
-  margin-right: 1rem;
-  padding: 0.5rem 1rem;
+section:nth-of-type(even) {
+  background-color: #f2f2f2;
+}
+
+/* Inline role title and buttons */
+.role-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.3rem 0;
+}
+.role-title {
   font-weight: bold;
+  font-size: 1.1rem;
+}
+.inline-button {
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  margin-left: 0.25rem;
+}
+
+/* Status indicator next to role name */
+.status-badge {
+  font-size: 0.85rem;
+  margin-left: 0.5rem;
+}
+
+/* Role description spacing */
+.role-header + p {
+  padding-left: 1.8rem;
+  margin-top: 0.2rem;
+}
+
+/* Install link buttons */
+.install-link {
+  display: inline-block;
+  margin-top: 0.4rem;
+  padding: 0.3rem 0.6rem;
+  background-color: #007acc;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.install-link:hover {
+  background-color: #005fa3;
+}
+
+/* Script list formatting */
+ul {
+  padding-left: 1.8rem;
+  margin-top: 0.2rem;
+}
+li {
+  margin-bottom: 0.3rem;
 }
