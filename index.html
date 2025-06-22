@@ -13,37 +13,111 @@
   </nav>
 
   <h1>🧭 Tampermonkey Control Center</h1>
+<section class="toggle-group">
+  <h2>Teaching Tools</h2>
+  <h3>🧑‍🏫 Teaching</h3>
+  <p>Tools that assist with daily classroom instruction, delivery of materials, and interactive teaching functions.</p>
+  <button disabled>▶️ Activate 🧑‍🏫 Teaching Mode</button>
+  <button disabled>✅ Enable All</button>
+  <button disabled>❌ Disable All</button>
+  <br><br>
+  <h3>🧾 Recordkeeping</h3>
+  <p>Tools to help teachers document, log, and track interactions, incidents, or classroom activity for compliance and communication.</p>
+  <button disabled>▶️ Activate 🧾 Recordkeeping Mode</button>
+  <button disabled>✅ Enable All</button>
+  <button disabled>❌ Disable All</button>
+  <br><br>
+</section>
+<section class="toggle-group">
+  <h2>Union Tools</h2>
+  <h3>📣 Organizer</h3>
+  <p>Tools for campaigns, turnout tracking, QR flyer generation, and collective action planning.</p>
+  <button disabled>▶️ Activate 📣 Organizer Mode</button>
+  <button disabled>✅ Enable All</button>
+  <button disabled>❌ Disable All</button>
+  <br><br>
+  <h3>👥 Site Rep</h3>
+  <p>Tools for on-campus union reps to manage issues, member interactions, and local representation.</p>
+  <button disabled>▶️ Activate 👥 Site Rep Mode</button>
+  <button disabled>✅ Enable All</button>
+  <button disabled>❌ Disable All</button>
+  <br><br>
+  <h3>🛡️ Defense</h3>
+  <p>Tools focused on protecting members' rights, detecting retaliation, and supporting grievances or defensive responses.</p>
+  <button disabled>▶️ Activate 🛡️ Defense Mode</button>
+  <button disabled>✅ Enable All</button>
+  <button disabled>❌ Disable All</button>
+  <br><br>
+  <h3>🧠 Officer</h3>
+  <p>Tools for union leadership to manage site updates, coordination, planning, and officer workflows.</p>
+  <button disabled>▶️ Activate 🧠 Officer Mode</button>
+  <button disabled>✅ Enable All</button>
+  <button disabled>❌ Disable All</button>
+  <br><br>
+  <h3>📜 Board Watcher</h3>
+  <p>Tools that analyze school board meetings, extract agendas, attach timestamped notes, and archive documents.</p>
+  <button disabled>▶️ Activate 📜 Board Watcher Mode</button>
+  <button disabled>✅ Enable All</button>
+  <button disabled>❌ Disable All</button>
+  <br><br>
+  <h3>📉 Pattern Tracker</h3>
+  <p>Tag and build strategic timelines of district behavior, language patterns, and recurring tactics.</p>
+  <button disabled>▶️ Activate 📉 Pattern Tracker Mode</button>
+  <button disabled>✅ Enable All</button>
+  <button disabled>❌ Disable All</button>
+  <br><br>
+  <h3>🗃️ Archiving Tools</h3>
+  <p>Save, version, and snapshot board content, policies, and documents for long-term reference.</p>
+  <button disabled>▶️ Activate 🗃️ Archiving Tools Mode</button>
+  <button disabled>✅ Enable All</button>
+  <button disabled>❌ Disable All</button>
+  <br><br>
+  <h3>📑 Verification Tools</h3>
+  <p>Quote taggers, timestamped references, and contract linkage tools to verify or log communications.</p>
+  <button disabled>▶️ Activate 📑 Verification Tools Mode</button>
+  <button disabled>✅ Enable All</button>
+  <button disabled>❌ Disable All</button>
+  <br><br>
+  <h3>🕵️ Privacy Assist</h3>
+  <p>EXIF scrubbers, metadata viewers, and warnings before uploading or sharing sensitive files or info.</p>
+  <button disabled>▶️ Activate 🕵️ Privacy Assist Mode</button>
+  <button disabled>✅ Enable All</button>
+  <button disabled>❌ Disable All</button>
+  <br><br>
+</section>
+<section class="toggle-group">
+  <h2>System Tools</h2>
+  <h3>🛠️ System</h3>
+  <p>Foundational infrastructure tools to toggle script roles, inject menus, or manage update and backup systems.</p>
+  <button disabled>▶️ Activate 🛠️ System Mode</button>
+  <button disabled>✅ Enable All</button>
+  <button disabled>❌ Disable All</button>
+  <br><br>
+</section>
+<section class="toggle-group">
+  <h2>Research + Data Tools</h2>
+  <h3>📁 Research Tools</h3>
+  <p>Scrapers, analyzers, table processors, and text utilities to extract structured information.</p>
+  <button disabled>▶️ Activate 📁 Research Tools Mode</button>
+  <button disabled>✅ Enable All</button>
+  <button disabled>❌ Disable All</button>
+  <br><br>
+  <h3>📊 Data Tools</h3>
+  <p>Visualize, chart, or summarize data from scraped pages or internal logs for faster insight.</p>
+  <button disabled>▶️ Activate 📊 Data Tools Mode</button>
+  <button disabled>✅ Enable All</button>
+  <button disabled>❌ Disable All</button>
+  <br><br>
+</section>
+<section class="toggle-group">
+  <h2>Price Tracking Tools</h2>
+  <h3>💸 Price Tracking</h3>
+  <p>Unit cost calculators, alternate sellers, historical pricing, and wishlist deferral tools for strategic purchasing.</p>
+  <button disabled>▶️ Activate 💸 Price Tracking Mode</button>
+  <button disabled>✅ Enable All</button>
+  <button disabled>❌ Disable All</button>
+  <br><br>
+</section>
 
-  <section class="toggle-group">
-    <h2>🛠️ System Tools</h2>
-    <p>Tools that power your infrastructure: enable/disable scripts, check for updates, and inject floating control UIs. These are foundational utilities — they do not perform user-facing tasks, but they keep your system healthy and organized.</p>
-    <button onclick="activateMode('system')">▶️ Activate System Mode</button>
-    <button onclick="toggleGroup('system', true)">✅ Enable All</button>
-    <button onclick="toggleGroup('system', false)">❌ Disable All</button>
-  </section>
-
-  <script>
-    const systemScripts = [
-      'script-toggle-panel',
-      'dashboard-injector',
-      'update-checker'
-    ];
-
-    function toggleGroup(group, enable) {
-      const scripts = {
-        system: systemScripts
-      };
-      scripts[group].forEach(id => {
-        console.log((enable ? 'Enabling' : 'Disabling') + ' script:', id);
-        // Placeholder for actual Tampermonkey toggle logic
-      });
-      location.reload();
-    }
-
-    function activateMode(group) {
-      console.log('Activating mode:', group);
-      // Placeholder for full group mode activation logic
-    }
-  </script>
 </body>
 </html>
