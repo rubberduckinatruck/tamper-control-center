@@ -28,10 +28,14 @@
       margin: 1rem 0 0.5rem;
     }
     section {
-      margin-bottom: 1rem;
+      max-width: 800px;
+      margin: 0 auto 1rem auto;
       padding: 0.75rem;
       background: #fff;
       border: 1px solid #ccc;
+    }
+    section:nth-of-type(even) {
+      background-color: #f2f2f2;
     }
     .role-header {
       display: flex;
@@ -39,13 +43,21 @@
       align-items: center;
       margin: 0.2rem 0;
     }
+    .role-title {
+      font-weight: bold;
+    }
     .inline-button {
       font-size: 0.75rem;
       padding: 2px 6px;
       margin-left: 0.25rem;
     }
-    p {
-      margin: 0.3rem 0 0.6rem 0;
+    .role-header + p {
+      padding-left: 1.8rem;
+      margin-top: 0.2rem;
+    }
+    .status-badge {
+      font-size: 0.85rem;
+      margin-left: 0.5rem;
     }
   </style>
 </head>
@@ -59,63 +71,121 @@
   <h1>🧭 Tampermonkey Control Center</h1>
 <section>
 <h2>Teaching Tools</h2>
-<div class="role-header"><div><strong>🧑‍🏫 Teaching</strong></div>
-<div><button class="inline-button">▶ Activate</button><button class="inline-button">✓ Enable</button><button class="inline-button">✖ Disable</button></div></div>
+<div class="role-header" data-hat="teaching"><div class="role-title">🧑‍🏫 Teaching<span class="status-badge" id="status-teaching">⏳</span></div>
+<div><button class="inline-button">▶ Activate</button>
+<button class="inline-button">✓ Enable</button>
+<button class="inline-button">✖ Disable</button></div>
+</div>
 <p>Tools that assist with daily classroom instruction, delivery of materials, and interactive teaching functions.</p>
-<div class="role-header"><div><strong>🧾 Recordkeeping</strong></div>
-<div><button class="inline-button">▶ Activate</button><button class="inline-button">✓ Enable</button><button class="inline-button">✖ Disable</button></div></div>
+<div class="role-header" data-hat="recordkeeping"><div class="role-title">🧾 Recordkeeping<span class="status-badge" id="status-recordkeeping">⏳</span></div>
+<div><button class="inline-button">▶ Activate</button>
+<button class="inline-button">✓ Enable</button>
+<button class="inline-button">✖ Disable</button></div>
+</div>
 <p>Tools to help teachers document, log, and track interactions, incidents, or classroom activity for compliance and communication.</p>
 </section>
 <section>
 <h2>Union Tools</h2>
-<div class="role-header"><div><strong>📣 Organizer</strong></div>
-<div><button class="inline-button">▶ Activate</button><button class="inline-button">✓ Enable</button><button class="inline-button">✖ Disable</button></div></div>
+<div class="role-header" data-hat="organizer"><div class="role-title">📣 Organizer<span class="status-badge" id="status-organizer">⏳</span></div>
+<div><button class="inline-button">▶ Activate</button>
+<button class="inline-button">✓ Enable</button>
+<button class="inline-button">✖ Disable</button></div>
+</div>
 <p>Tools for campaigns, turnout tracking, QR flyer generation, and collective action planning.</p>
-<div class="role-header"><div><strong>👥 Site Rep</strong></div>
-<div><button class="inline-button">▶ Activate</button><button class="inline-button">✓ Enable</button><button class="inline-button">✖ Disable</button></div></div>
+<div class="role-header" data-hat="site_rep"><div class="role-title">👥 Site Rep<span class="status-badge" id="status-site_rep">⏳</span></div>
+<div><button class="inline-button">▶ Activate</button>
+<button class="inline-button">✓ Enable</button>
+<button class="inline-button">✖ Disable</button></div>
+</div>
 <p>Tools for on-campus union reps to manage issues, member interactions, and local representation.</p>
-<div class="role-header"><div><strong>🛡️ Defense</strong></div>
-<div><button class="inline-button">▶ Activate</button><button class="inline-button">✓ Enable</button><button class="inline-button">✖ Disable</button></div></div>
+<div class="role-header" data-hat="defense"><div class="role-title">🛡️ Defense<span class="status-badge" id="status-defense">⏳</span></div>
+<div><button class="inline-button">▶ Activate</button>
+<button class="inline-button">✓ Enable</button>
+<button class="inline-button">✖ Disable</button></div>
+</div>
 <p>Tools focused on protecting members' rights, detecting retaliation, and supporting grievances or defensive responses.</p>
-<div class="role-header"><div><strong>🧠 Officer</strong></div>
-<div><button class="inline-button">▶ Activate</button><button class="inline-button">✓ Enable</button><button class="inline-button">✖ Disable</button></div></div>
+<div class="role-header" data-hat="officer"><div class="role-title">🧠 Officer<span class="status-badge" id="status-officer">⏳</span></div>
+<div><button class="inline-button">▶ Activate</button>
+<button class="inline-button">✓ Enable</button>
+<button class="inline-button">✖ Disable</button></div>
+</div>
 <p>Tools for union leadership to manage site updates, coordination, planning, and officer workflows.</p>
-<div class="role-header"><div><strong>📜 Board Watcher</strong></div>
-<div><button class="inline-button">▶ Activate</button><button class="inline-button">✓ Enable</button><button class="inline-button">✖ Disable</button></div></div>
+<div class="role-header" data-hat="board_watcher"><div class="role-title">📜 Board Watcher<span class="status-badge" id="status-board_watcher">⏳</span></div>
+<div><button class="inline-button">▶ Activate</button>
+<button class="inline-button">✓ Enable</button>
+<button class="inline-button">✖ Disable</button></div>
+</div>
 <p>Tools that analyze school board meetings, extract agendas, attach timestamped notes, and archive documents.</p>
-<div class="role-header"><div><strong>📉 Pattern Tracker</strong></div>
-<div><button class="inline-button">▶ Activate</button><button class="inline-button">✓ Enable</button><button class="inline-button">✖ Disable</button></div></div>
+<div class="role-header" data-hat="pattern_tracker"><div class="role-title">📉 Pattern Tracker<span class="status-badge" id="status-pattern_tracker">⏳</span></div>
+<div><button class="inline-button">▶ Activate</button>
+<button class="inline-button">✓ Enable</button>
+<button class="inline-button">✖ Disable</button></div>
+</div>
 <p>Tag and build strategic timelines of district behavior, language patterns, and recurring tactics.</p>
-<div class="role-header"><div><strong>🗃️ Archiving Tools</strong></div>
-<div><button class="inline-button">▶ Activate</button><button class="inline-button">✓ Enable</button><button class="inline-button">✖ Disable</button></div></div>
+<div class="role-header" data-hat="archiving_tools"><div class="role-title">🗃️ Archiving Tools<span class="status-badge" id="status-archiving_tools">⏳</span></div>
+<div><button class="inline-button">▶ Activate</button>
+<button class="inline-button">✓ Enable</button>
+<button class="inline-button">✖ Disable</button></div>
+</div>
 <p>Save, version, and snapshot board content, policies, and documents for long-term reference.</p>
-<div class="role-header"><div><strong>📑 Verification Tools</strong></div>
-<div><button class="inline-button">▶ Activate</button><button class="inline-button">✓ Enable</button><button class="inline-button">✖ Disable</button></div></div>
+<div class="role-header" data-hat="verification_tools"><div class="role-title">📑 Verification Tools<span class="status-badge" id="status-verification_tools">⏳</span></div>
+<div><button class="inline-button">▶ Activate</button>
+<button class="inline-button">✓ Enable</button>
+<button class="inline-button">✖ Disable</button></div>
+</div>
 <p>Quote taggers, timestamped references, and contract linkage tools to verify or log communications.</p>
-<div class="role-header"><div><strong>🕵️ Privacy Assist</strong></div>
-<div><button class="inline-button">▶ Activate</button><button class="inline-button">✓ Enable</button><button class="inline-button">✖ Disable</button></div></div>
+<div class="role-header" data-hat="privacy_assist"><div class="role-title">🕵️ Privacy Assist<span class="status-badge" id="status-privacy_assist">⏳</span></div>
+<div><button class="inline-button">▶ Activate</button>
+<button class="inline-button">✓ Enable</button>
+<button class="inline-button">✖ Disable</button></div>
+</div>
 <p>EXIF scrubbers, metadata viewers, and warnings before uploading or sharing sensitive files or info.</p>
 </section>
 <section>
 <h2>System Tools</h2>
-<div class="role-header"><div><strong>🛠️ System</strong></div>
-<div><button class="inline-button">▶ Activate</button><button class="inline-button">✓ Enable</button><button class="inline-button">✖ Disable</button></div></div>
+<div class="role-header" data-hat="system"><div class="role-title">🛠️ System<span class="status-badge" id="status-system">⏳</span></div>
+<div><button class="inline-button">▶ Activate</button>
+<button class="inline-button">✓ Enable</button>
+<button class="inline-button">✖ Disable</button></div>
+</div>
 <p>Foundational infrastructure tools to toggle script roles, inject menus, or manage update and backup systems.</p>
 </section>
 <section>
 <h2>Research + Data Tools</h2>
-<div class="role-header"><div><strong>📁 Research Tools</strong></div>
-<div><button class="inline-button">▶ Activate</button><button class="inline-button">✓ Enable</button><button class="inline-button">✖ Disable</button></div></div>
+<div class="role-header" data-hat="research_tools"><div class="role-title">📁 Research Tools<span class="status-badge" id="status-research_tools">⏳</span></div>
+<div><button class="inline-button">▶ Activate</button>
+<button class="inline-button">✓ Enable</button>
+<button class="inline-button">✖ Disable</button></div>
+</div>
 <p>Scrapers, analyzers, table processors, and text utilities to extract structured information.</p>
-<div class="role-header"><div><strong>📊 Data Tools</strong></div>
-<div><button class="inline-button">▶ Activate</button><button class="inline-button">✓ Enable</button><button class="inline-button">✖ Disable</button></div></div>
+<div class="role-header" data-hat="data_tools"><div class="role-title">📊 Data Tools<span class="status-badge" id="status-data_tools">⏳</span></div>
+<div><button class="inline-button">▶ Activate</button>
+<button class="inline-button">✓ Enable</button>
+<button class="inline-button">✖ Disable</button></div>
+</div>
 <p>Visualize, chart, or summarize data from scraped pages or internal logs for faster insight.</p>
 </section>
 <section>
 <h2>Price Tracking Tools</h2>
-<div class="role-header"><div><strong>💸 Price Tracking</strong></div>
-<div><button class="inline-button">▶ Activate</button><button class="inline-button">✓ Enable</button><button class="inline-button">✖ Disable</button></div></div>
+<div class="role-header" data-hat="price_tracking"><div class="role-title">💸 Price Tracking<span class="status-badge" id="status-price_tracking">⏳</span></div>
+<div><button class="inline-button">▶ Activate</button>
+<button class="inline-button">✓ Enable</button>
+<button class="inline-button">✖ Disable</button></div>
+</div>
 <p>Unit cost calculators, alternate sellers, historical pricing, and wishlist deferral tools for strategic purchasing.</p>
 </section>
+
+<script>
+const hats = document.querySelectorAll("[data-hat]");
+hats.forEach(el => {
+  const id = el.dataset.hat;
+  const val = localStorage.getItem("status_" + id);
+  const badge = document.getElementById("status-" + id);
+  if (!badge) return;
+  if (val === "enabled") badge.textContent = "✅";
+  else if (val === "disabled") badge.textContent = "❌";
+  else badge.textContent = "❓";
+});
+</script>
 </body>
 </html>

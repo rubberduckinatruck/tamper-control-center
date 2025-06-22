@@ -1,14 +1,14 @@
 // ==UserScript==
-// @name         Script Toggle Panel
+// @name         Settings Sync Manager
 // @namespace    http://tampermonkey.net/
 // @version      0.1
-// @description  Script Toggle Panel - System Tool Script
+// @description  Settings Sync Manager - System Tool Script
 // @match        *://*/*
 // @grant        none
 // ==/UserScript==
 
 (function() {
-    const HAT_ID = "script_toggle_panel";
+    const HAT_ID = "settings_sync_manager";
 
     function updateStatus(state) {
         const payload = {
@@ -25,5 +25,5 @@
     });
 
     // Placeholder logic
-    console.log("[Script Toggle Panel] system script active.");
+    console.log("[Settings Sync Manager] system script active.");
 })();
